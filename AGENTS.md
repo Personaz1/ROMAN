@@ -1,0 +1,3 @@
+# Agent instructions
+
+Small application prototype. Inspect the current README, dependency manifests and provider API assumptions before edits. Keep credentials in environment variables or a secret manager; never commit keys, tokens or user data. Validate provider responses, error handling and rate limits. State clearly what is implemented versus a mock or placeholder. Do not deploy or spend API credits without approval.
