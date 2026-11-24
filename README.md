@@ -1,69 +1,29 @@
-# ROMAN: Gemini Admin Chat Panel
+# ROMAN — Gemini Admin Panel
 
-## Описание
+ROMAN is a small Streamlit interface for sending prompts to Gemini models. It exposes a configurable system prompt and accepts an API key through the local user interface.
 
-Простой админ-панель для общения с моделями Gemini через Streamlit. Поддерживает выбор системного промпта и ввод API-ключа через UI.
+## Features
+- Streamlit-based chat/admin interface.
+- Configurable system prompt.
+- User-provided Gemini API key.
+- Script for launching multiple local instances.
 
-## Быстрый старт
+## Requirements
+- Python 3.8 or later (verify against installed dependency versions).
+- A Gemini API key and network access to the provider.
 
-### 1. Клонируйте репозиторий
-```bash
-git clone https://github.com/Personaz1/ROMAN.git
-cd ROMAN
-```
+## Local setup
+    git clone https://github.com/Personaz1/ROMAN.git
+    cd ROMAN
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    streamlit run admin_panel.py
 
-### 2. Установите зависимости
-Рекомендуется использовать виртуальное окружение:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+Open the local Streamlit URL printed in the terminal (normally http://localhost:8501).
 
-### 3. Запустите приложение
-```bash
-streamlit run admin_panel.py
-```
+## Configuration and security
+Provide the API key locally; never commit keys, .env files, request logs or private prompts. Review provider terms and data handling before submitting sensitive material. This repository does not claim enterprise access control or multi-user isolation.
 
-### 4. Откройте в браузере
-Перейдите по адресу: [http://localhost:8501](http://localhost:8501)
-
-### 5. Введите API-ключ Gemini
-- Введите свой API-ключ Gemini в настройках слева.
-- При необходимости измените системный промпт.
-
----
-
-## Обновление (pull)
-Если проект уже склонирован, для обновления выполните:
-```bash
-git pull
-```
-
----
-
-## Запуск нескольких экземпляров
-
-Для запуска нескольких копий панели на разных портах используйте скрипт:
-
-```bash
-chmod +x run_multi.sh
-./run_multi.sh 10
-```
-
-- Первый аргумент — количество экземпляров (по умолчанию 1).
-- Второй аргумент (необязательно) — начальный порт (по умолчанию 8501).
-- Каждый экземпляр будет запущен на свободном порту, начиная с указанного.
-- Логи каждого экземпляра сохраняются в `streamlit_<порт>.log`.
-
----
-
-## Требования
-- Python 3.8+
-- Доступ к интернету
-- API-ключ Gemini
-
----
-
-## Контакты
-Автор: [Personaz1](https://github.com/Personaz1) 
+## Status
+Small utility prototype. No production support, uptime guarantee or current provider compatibility guarantee is implied.
