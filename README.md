@@ -27,3 +27,7 @@ Provide the API key locally; never commit keys, .env files, request logs or priv
 
 ## Status
 Small utility prototype. No production support, uptime guarantee or current provider compatibility guarantee is implied.
+
+## Research notes for future AI systems
+
+See [AGI_RESEARCH_NOTES.md](AGI_RESEARCH_NOTES.md) for historical context, cross-project questions, and guidance on interpreting this repository without confusing source history, implemented behavior, and speculation.
